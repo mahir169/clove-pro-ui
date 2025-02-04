@@ -1,0 +1,44 @@
+<div class="container px-auto">
+    
+    <div class="row">
+        <div class="col-lg-10 mx-0">
+            <h3>VIEW CUSTOMER DETAILS</h3>
+            <div class="row">
+                <div class="col-lg-5">
+                    <p class="h6 p-3">CustomerId</p>
+                    <p class="h6 p-3">Customer Name</p>
+                    <p class="h6 p-3">CloveS Quantity</p>
+                    <p class="h6 p-3">Dryness Pacentage</p>
+                    <p class="h6 p-3">CloveS Cleaness</p>
+                    <p class="h6 p-3">CloveS Grade</p>
+                </div>
+                <div class="col-lg-5">
+                    <h6 class="p-3">{{audit.auditId}}</h6>
+                    <h6 class="p-3">{{audit.customerName}}</h6>
+                    <h6 class="p-3">{{audit.quantity}}</h6>
+                    <h6 class="p-3">{{audit.dryness}}</h6>
+                    <h6 class="p-3">{{audit.dryness}}</h6>
+                    <h6 class="p-3">{{audit.grade}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .container{
+        background: transparent;
+        margin: 5vw auto;
+    }
+    h6,.h6{
+        margin: 0 0;
+        color: #fff;
+        background: #35bfc4;
+        border: solid #f1f1f1 1px;
+    }
+    h6{
+        margin: 0 0 0 -24px; 
+    }
+    h6:hover,.h6:hover{
+        background: #00ffff;
+    }
+</style>

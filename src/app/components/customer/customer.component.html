@@ -1,0 +1,50 @@
+<div class="container mx-auto mt-5" id="mx-auto">
+    <h4 class="text-left">CUSTOMERS RECODES</h4>
+    <button class="btn-primary btn col-lg-2 p-2" (click)="addCustomer()">
+      <mat-icon>add</mat-icon>Add Custoomer</button>
+</div>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-12 col-lg-12 col-md-4 col-sm-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="th-customer">id</th>
+                    <th scope="col" class="th-customer">Customer name</th>
+                    <th scope="col" class="th-customer">address</th>
+                    <th scope="col" class="th-customer">phone</th>
+                    <th scope="col" class="th-customer">chet</th>
+                    <th scope="col" class="th-customer">date</th>
+                    <th scope="col" class="th-customer">action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Customer of customer">
+                    <td>{{Customer.customerId}}</td>
+                    <td>{{Customer.name}}</td>
+                    <td>{{Customer.address}}</td>
+                    <td>{{Customer.phone}}</td>
+                    <td>{{Customer.chet}}</td>
+                    <td>{{Customer.date}}</td>
+                    <td class="col-lg-3 text-center px-0">
+                      <button class="btn btn-outline-warning px-2 pb-0 mx-2" (click)="onViewCustomer(Customer.customerId)" ><mat-icon>visibility</mat-icon></button>
+                        <button class="btn btn-outline-success px-2 pb-0 mx-2"  (click)="updtCustomer(Customer.customerId)"><mat-icon>update</mat-icon></button>
+                        <button class="btn btn-outline-danger px-2 pb-0 mx-2"  (click)="onDeleteCustomer(Customer.customerId)"><mat-icon>delete</mat-icon></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<style>
+    .th-customer{
+    color: #fff;
+    text-align: center;
+    background: #17a2b8;
+}
+#mx-auto{
+    display: flex;
+    justify-content: space-between;
+}
+</style>

@@ -1,0 +1,46 @@
+<div class="container px-auto">
+    
+    <div class="row">
+        <div class="col-lg-10 mx-0">
+            <h3>VIEW PAYMENT DETAILS</h3>
+            <div class="row">
+                <div class="col-lg-5">
+                    <p class="h6 p-3">PaymentId</p>
+                    <p class="h6 p-3">Customer Name</p>
+                    <p class="h6 p-3">Clove Quantity</p>
+                    <p class="h6 p-3">Clove Grade</p>
+                    <p class="h6 p-3">Payment Amount</p>
+                    <p class="h6 p-3">Date</p>
+                    <p class="h6 p-3">Confirmation</p>
+                </div>
+                <div class="col-lg-5">
+                    <h6 class="p-3">{{payment.paymentId}}</h6>
+                    <h6 class="p-3">{{payment.customer}}</h6>
+                    <h6 class="p-3">{{payment.quantity}}</h6>
+                    <h6 class="p-3">{{payment.grade}}</h6>
+                    <h6 class="p-3">{{payment.amount}}</h6>
+                    <h6 class="p-3">{{payment.date}}</h6>
+                    <h6 class="p-3">{{payment.confirmation}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .container{
+        background: transparent;
+        margin: 5vw auto;
+    }
+    h6,.h6{
+        margin: 0 0;
+        color: #fff;
+        background: #35bfc4;
+        border: solid #f1f1f1 1px;
+    }
+    h6{
+        margin: 0 0 0 -24px; 
+    }
+    h6:hover,.h6:hover{
+        background: #00ffff;
+    }
+</style>

@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h3>UPDATE AUDIT DETAILS</h3>
+    <div class="card col-lg-6">
+      <form class="col-lg-6 m-3" (ngSubmit)="updateAuditById()">
+        <div class="form-group mb-3">
+          <label for="name">Customer Name</label>
+          <input type="text" class="form-control" name="customerName" [(ngModel)]="audit.customerName" placeholder="Enter name">
+        </div>
+        <div class="form-group mb-3">
+          <label for="quantity">Cloves Quantity</label>
+          <input type="text" class="form-control"  name="dryness" [(ngModel)]="audit.quantity" placeholder="Enter Quantity">
+        </div>
+        <div class="form-group mb-3">
+          <label for="dryness">Coves Dryness</label>
+          <input type="text" class="form-control" name="dryness" [(ngModel)]="audit.dryness"  placeholder="Enter dryness">
+        </div>
+        <div class="form-group mb-3">
+          <label for="clean">Cloves Cleaness</label>
+          <input type="text" class="form-control" name="clean" [(ngModel)]="audit.cLean"  placeholder="Enter clean">
+        </div>
+        <div class="form-group mb-3">
+          <label for="grade">Cloves Grade</label>
+          <input type="text" class="form-control" name="grade" [(ngModel)]="audit.grade"  placeholder="Enter grade">
+        </div>
+        <button type="submit" class="btn btn-primary"><mat-icon>save</mat-icon> save</button>
+      </form>
+    </div>
+  </div>
+
+  <style>
+    .container,.card{
+        align-items: center;
+    }
+  </style>
+  

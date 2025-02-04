@@ -1,0 +1,34 @@
+<div class="container mt-2 mb-5">
+  <h3>ADD PAYMENTS</h3>
+    <div class="card col-lg-5 mb-5">
+      <form class="col-md-8 mx-5 m-3" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="customer">Customer</label>
+          <input type="text" class="form-control" name="customer" [(ngModel)]="payment.customer"  placeholder="Enter Customer">
+        </div>
+        <div class="form-group mb-3">
+          <label for="quantity">Clove Quantity</label>
+          <input type="text" class="form-control"  name="quantity" [(ngModel)]="payment.quantity"  placeholder="Enter Quantity">
+        </div>
+        <div class="form-group mb-3">
+          <label for="grade">Clove Grade</label>
+          <input type="text" class="form-control" name="grade" [(ngModel)]="payment.grade"  placeholder="Enter grade">
+        </div>
+        <div class="form-group mb-3">
+          <label for="amount">Payment Amount</label>
+          <input type="tel" class="form-control" name="amount" [(ngModel)]="payment.amount"  placeholder="Enter Amount">
+        </div>
+        <div class="form-group mb-3">
+          <label for="date">Payment Date</label>
+          <input type="text" class="form-control" name="date" [(ngModel)]="payment.date" placeholder="Enter Date">
+        </div>
+        <div class="form-group mb-3">
+            <label for="confirmation">Payment Confirmation</label>
+            <input type="text" class="form-control" name="confirmation" [(ngModel)]="payment.confirmation" placeholder="Confirmation">
+          </div>
+        <button type="s ubmit" class="btn btn-primary"><mat-icon>save</mat-icon> submit</button>
+      </form>
+    </div>
+  </div>
+
+    

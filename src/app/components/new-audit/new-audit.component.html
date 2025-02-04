@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <h3>ADD CLOVE AUDIT</h3>
+    <div class="card col-lg-5">
+      <form class="col-md-8 mx-5 m-3" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="customerName">Customer Name</label>
+          <input type="text" class="form-control" name="customerName" [(ngModel)]="audit.customerName"  placeholder="Enter Name">
+        </div>
+        <div class="form-group mb-3">
+          <label for="quantity">Clove Quantity</label>
+          <input type="text" class="form-control"  name="address" [(ngModel)]="audit.quantity"  placeholder="Enter Quantity">
+        </div>
+        <div class="form-group mb-3">
+          <label for="dryness">Dryness Pacentage</label>
+          <input type="text" class="form-control" name="dryness" [(ngModel)]="audit.dryness"  placeholder="Enter Dryness">
+        </div>
+        <div class="form-group mb-3">
+          <label for="clean">Clove Cleaness</label>
+          <input type="text" class="form-control" name="clean" [(ngModel)]="audit.cLean"  placeholder="Enter Cleaness">
+        </div>
+        <div class="form-group mb-3">
+          <label for="grade">Clove Grade</label>
+          <input type="text" class="form-control" name="grade" [(ngModel)]="audit.grade" placeholder="Enter Grade">
+        </div>
+        <button type="s ubmit" class="btn btn-primary"><mat-icon>save</mat-icon> submit</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,51 @@
+<div class="container mx-auto mt-5" id="mx-auto">
+    <h4 class="text-left">PAYMENT INFORMATIONS</h4>
+    <button class="btn-primary btn col-lg-2 p-2"  (click)="addPayment()">Add Payment</button>
+</div>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-12 col-lg-12 col-md-4 col-sm-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="th-payment">Id</th>
+                    <th scope="col" class="th-payment">Customer</th>
+                    <th scope="col" class="th-payment">Quantity</th>
+                    <th scope="col" class="th-payment">Grade</th>
+                    <th scope="col" class="th-payment">Amount</th>
+                    <th scope="col" class="th-payment">Date</th>
+                    <th scope="col" class="th-payment">Confirmation</th>
+                    <th scope="col" class="th-payment">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Payment of payment">
+                    <td>{{Payment.paymentId}}</td>
+                    <td>{{Payment.customer}}</td>
+                    <td>{{Payment.quantity}}</td>
+                    <td>{{Payment.grade}}</td>
+                    <td>{{Payment.amount}}</td>
+                    <td>{{Payment.date}}</td>
+                    <td>{{Payment.confirmation}}</td>
+                    <td class="col-lg-3 text-center px-0">
+                      <button class="btn btn-outline-warning px-2 pb-0 mx-2" (click)="viewPayment(Payment.paymentId)" ><mat-icon>visibility</mat-icon></button>
+                        <button class="btn btn-outline-success px-2 pb-0 mx-2" (click)="updatePayment(Payment.paymentId)"><mat-icon>update</mat-icon></button>
+                        <button class="btn btn-outline-danger px-2 pb-0 mx-2" (click)="deletePayment(Payment.paymentId)"><mat-icon>delete</mat-icon></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<style>
+    .th-payment{
+    color: #fff;
+    text-align: center;
+    background: #17a2b8;
+}
+#mx-auto{
+    display: flex;
+    justify-content: space-between;
+}
+</style>

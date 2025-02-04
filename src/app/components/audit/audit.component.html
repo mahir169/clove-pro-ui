@@ -1,0 +1,49 @@
+<div class="container mx-auto mt-5" id="mx-auto">
+    <h4 class="text-left">AUDITS DETAILS FOR CLOVES QUALIFICATION</h4>
+    <button class="btn-primary text-white btn col-lg-2 p-2" (click)="addAudit()"><mat-icon>add </mat-icon> Audit</button>
+</div>
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-12 col-lg-12 col-md-4 col-sm-6">
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="th-audit">id</th>
+                    <th scope="col" class="th-audit">customerName</th>
+                    <th scope="col" class="th-audit">quantity</th>
+                    <th scope="col" class="th-audit">dryness</th>
+                    <th scope="col" class="th-audit">clean</th>
+                    <th scope="col" class="th-audit">grade</th>
+                    <th scope="col" class="th-audit">action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let Audit of audit">
+                    <td>{{Audit.auditId}}</td>
+                    <td>{{Audit.customerName}}</td>
+                    <td>{{Audit.quantity}}</td>
+                    <td>{{Audit.dryness}}</td>
+                    <td>{{Audit.dryness}}</td>
+                    <td>{{Audit.grade}}</td>
+                    <td class="col-lg-3 text-center px-0">
+                      <button class="btn btn-outline-warning px-2 pb-0 mx-2" (click)="viewAudit(Audit.auditId)"><mat-icon>visibility</mat-icon></button>
+                        <button class="btn btn-outline-success px-2 pb-0 mx-2" (click)="updateAuditById(Audit.auditId)"><mat-icon>update</mat-icon></button>
+                        <button class="btn btn-outline-danger px-2 pb-0 mx-2" (click)="deleteAudit(Audit.auditId)"><mat-icon>delete</mat-icon></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+<style>
+    .th-audit{
+    color: #fff;
+    text-align: center;
+    background: #17a2b8;
+}
+#mx-auto{
+    display: flex;
+    justify-content: space-between;
+}
+</style>
